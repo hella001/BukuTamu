@@ -35,7 +35,6 @@
             this.BtnUser = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.JmlTamu = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.BtnRefresh = new System.Windows.Forms.Button();
             this.BtnKeluar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridTamu)).BeginInit();
@@ -116,17 +115,6 @@
             this.JmlTamu.TabIndex = 6;
             this.JmlTamu.Text = "5";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(209, 98);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 22);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Orang";
-            // 
             // BtnRefresh
             // 
             this.BtnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,7 +145,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnKeluar);
             this.Controls.Add(this.BtnRefresh);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.JmlTamu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnUser);
@@ -185,7 +172,6 @@
         private System.Windows.Forms.Button BtnUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label JmlTamu;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnRefresh;
         private System.Windows.Forms.Button BtnKeluar;
     }

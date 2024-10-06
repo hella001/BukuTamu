@@ -120,6 +120,7 @@
             this.BtnBack.TabIndex = 11;
             this.BtnBack.Text = "Kembali";
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // Pengguna
             // 

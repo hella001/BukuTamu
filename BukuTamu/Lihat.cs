@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace BukuTamu
 {
-    public partial class EditAdmin : Form
+    public partial class Lihat : Form
     {
-        public EditAdmin()
+        public Lihat()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnBatal_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }

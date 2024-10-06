@@ -50,6 +50,7 @@
             this.BtnBatal.TabIndex = 21;
             this.BtnBatal.Text = "Batal";
             this.BtnBatal.UseVisualStyleBackColor = true;
+            this.BtnBatal.Click += new System.EventHandler(this.BtnBatal_Click);
             // 
             // BtnTambah
             // 

@@ -16,5 +16,10 @@ namespace BukuTamu
         {
             InitializeComponent();
         }
+
+        private void BtnBatal_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

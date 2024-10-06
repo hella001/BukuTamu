@@ -32,5 +32,13 @@ namespace BukuTamu
             f2.ShowDialog();
             this.Close();
         }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin back = new Admin();
+            back.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -147,6 +147,7 @@
             this.BtnBatal.TabIndex = 10;
             this.BtnBatal.Text = "Batal";
             this.BtnBatal.UseVisualStyleBackColor = true;
+            this.BtnBatal.Click += new System.EventHandler(this.BtnBatal_Click);
             // 
             // TambahAdmin
             // 
@@ -167,6 +168,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TambahAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TambahAdmin";
             this.ResumeLayout(false);
             this.PerformLayout();

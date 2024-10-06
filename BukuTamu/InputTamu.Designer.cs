@@ -48,8 +48,13 @@
             this.BtnSimpan = new System.Windows.Forms.Button();
             this.BtnBersih = new System.Windows.Forms.Button();
             this.BtnMasuk = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.IntKelamin = new System.Windows.Forms.ComboBox();
+            this.BtnFoto = new System.Windows.Forms.Button();
+            this.IntFoto = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.BtnLihat = new System.Windows.Forms.Button();
+            this.BtnPilih = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +87,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(411, 141);
+            this.label2.Location = new System.Drawing.Point(559, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 24);
             this.label2.TabIndex = 3;
@@ -105,7 +110,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(411, 187);
+            this.label5.Location = new System.Drawing.Point(559, 185);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 24);
             this.label5.TabIndex = 5;
@@ -116,7 +121,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(411, 295);
+            this.label6.Location = new System.Drawing.Point(559, 293);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 24);
             this.label6.TabIndex = 6;
@@ -127,7 +132,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(411, 238);
+            this.label7.Location = new System.Drawing.Point(559, 236);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 24);
             this.label7.TabIndex = 7;
@@ -190,7 +195,7 @@
             // IntHp
             // 
             this.IntHp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IntHp.Location = new System.Drawing.Point(549, 184);
+            this.IntHp.Location = new System.Drawing.Point(697, 182);
             this.IntHp.Name = "IntHp";
             this.IntHp.Size = new System.Drawing.Size(225, 29);
             this.IntHp.TabIndex = 16;
@@ -198,7 +203,7 @@
             // IntPekerjaan
             // 
             this.IntPekerjaan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IntPekerjaan.Location = new System.Drawing.Point(549, 238);
+            this.IntPekerjaan.Location = new System.Drawing.Point(697, 236);
             this.IntPekerjaan.Name = "IntPekerjaan";
             this.IntPekerjaan.Size = new System.Drawing.Size(225, 29);
             this.IntPekerjaan.TabIndex = 17;
@@ -206,16 +211,17 @@
             // IntKeperluan
             // 
             this.IntKeperluan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IntKeperluan.Location = new System.Drawing.Point(549, 295);
+            this.IntKeperluan.Location = new System.Drawing.Point(697, 293);
+            this.IntKeperluan.Multiline = true;
             this.IntKeperluan.Name = "IntKeperluan";
-            this.IntKeperluan.Size = new System.Drawing.Size(225, 29);
+            this.IntKeperluan.Size = new System.Drawing.Size(225, 182);
             this.IntKeperluan.TabIndex = 18;
             this.IntKeperluan.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // IntKeterangan
             // 
             this.IntKeterangan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IntKeterangan.Location = new System.Drawing.Point(140, 351);
+            this.IntKeterangan.Location = new System.Drawing.Point(134, 351);
             this.IntKeterangan.Multiline = true;
             this.IntKeterangan.Name = "IntKeterangan";
             this.IntKeterangan.Size = new System.Drawing.Size(411, 121);
@@ -224,43 +230,35 @@
             // BtnSimpan
             // 
             this.BtnSimpan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSimpan.Location = new System.Drawing.Point(601, 436);
+            this.BtnSimpan.Location = new System.Drawing.Point(389, 192);
             this.BtnSimpan.Name = "BtnSimpan";
             this.BtnSimpan.Size = new System.Drawing.Size(143, 36);
             this.BtnSimpan.TabIndex = 20;
             this.BtnSimpan.Text = "Simpan Data";
             this.BtnSimpan.UseVisualStyleBackColor = true;
+            this.BtnSimpan.Click += new System.EventHandler(this.BtnSimpan_Click);
             // 
             // BtnBersih
             // 
             this.BtnBersih.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBersih.Location = new System.Drawing.Point(602, 383);
+            this.BtnBersih.Location = new System.Drawing.Point(390, 139);
             this.BtnBersih.Name = "BtnBersih";
             this.BtnBersih.Size = new System.Drawing.Size(141, 36);
             this.BtnBersih.TabIndex = 22;
             this.BtnBersih.Text = "Bersihkan Kolom";
             this.BtnBersih.UseVisualStyleBackColor = true;
+            this.BtnBersih.Click += new System.EventHandler(this.BtnBersih_Click);
             // 
             // BtnMasuk
             // 
             this.BtnMasuk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMasuk.Location = new System.Drawing.Point(651, 22);
+            this.BtnMasuk.Location = new System.Drawing.Point(826, 12);
             this.BtnMasuk.Name = "BtnMasuk";
             this.BtnMasuk.Size = new System.Drawing.Size(123, 36);
             this.BtnMasuk.TabIndex = 23;
             this.BtnMasuk.Text = "Masuk";
             this.BtnMasuk.UseVisualStyleBackColor = true;
             this.BtnMasuk.Click += new System.EventHandler(this.BtnMasuk_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BukuTamu.Properties.Resources.BUKU_TAMU;
-            this.pictureBox1.Location = new System.Drawing.Point(269, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(282, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
             // 
             // IntKelamin
             // 
@@ -269,17 +267,85 @@
             this.IntKelamin.Items.AddRange(new object[] {
             "Laki - Laki",
             "Perempuan"});
-            this.IntKelamin.Location = new System.Drawing.Point(549, 133);
+            this.IntKelamin.Location = new System.Drawing.Point(697, 131);
             this.IntKelamin.Name = "IntKelamin";
             this.IntKelamin.Size = new System.Drawing.Size(225, 32);
             this.IntKelamin.TabIndex = 24;
+            // 
+            // BtnFoto
+            // 
+            this.BtnFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFoto.Location = new System.Drawing.Point(390, 242);
+            this.BtnFoto.Name = "BtnFoto";
+            this.BtnFoto.Size = new System.Drawing.Size(143, 36);
+            this.BtnFoto.TabIndex = 25;
+            this.BtnFoto.Text = "Ambil Foto KTP";
+            this.BtnFoto.UseVisualStyleBackColor = true;
+            this.BtnFoto.Click += new System.EventHandler(this.BtnFoto_Click);
+            // 
+            // IntFoto
+            // 
+            this.IntFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IntFoto.Location = new System.Drawing.Point(134, 490);
+            this.IntFoto.Name = "IntFoto";
+            this.IntFoto.Size = new System.Drawing.Size(266, 29);
+            this.IntFoto.TabIndex = 26;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.Control;
+            this.label10.Location = new System.Drawing.Point(27, 493);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(89, 24);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Foto KTP";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // BtnLihat
+            // 
+            this.BtnLihat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLihat.Location = new System.Drawing.Point(406, 489);
+            this.BtnLihat.Name = "BtnLihat";
+            this.BtnLihat.Size = new System.Drawing.Size(54, 31);
+            this.BtnLihat.TabIndex = 28;
+            this.BtnLihat.Text = "Lihat";
+            this.BtnLihat.UseVisualStyleBackColor = true;
+            this.BtnLihat.Click += new System.EventHandler(this.BtnLihat_Click);
+            // 
+            // BtnPilih
+            // 
+            this.BtnPilih.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPilih.Location = new System.Drawing.Point(466, 489);
+            this.BtnPilih.Name = "BtnPilih";
+            this.BtnPilih.Size = new System.Drawing.Size(82, 31);
+            this.BtnPilih.TabIndex = 29;
+            this.BtnPilih.Text = "Pilih Foto";
+            this.BtnPilih.UseVisualStyleBackColor = true;
+            this.BtnPilih.Click += new System.EventHandler(this.BtnPilih_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BukuTamu.Properties.Resources.BUKU_TAMU;
+            this.pictureBox1.Location = new System.Drawing.Point(347, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(282, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
             // 
             // InputTamu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(800, 525);
+            this.ClientSize = new System.Drawing.Size(961, 555);
+            this.Controls.Add(this.BtnPilih);
+            this.Controls.Add(this.BtnLihat);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.IntFoto);
+            this.Controls.Add(this.BtnFoto);
             this.Controls.Add(this.IntKelamin);
             this.Controls.Add(this.BtnMasuk);
             this.Controls.Add(this.BtnBersih);
@@ -337,6 +403,11 @@
         private System.Windows.Forms.Button BtnMasuk;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox IntKelamin;
+        private System.Windows.Forms.Button BtnFoto;
+        private System.Windows.Forms.TextBox IntFoto;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button BtnLihat;
+        private System.Windows.Forms.Button BtnPilih;
     }
 }
 

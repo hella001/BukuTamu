@@ -16,5 +16,27 @@ namespace BukuTamu
         {
             InitializeComponent();
         }
+
+        private void BtnTambah_Click(object sender, EventArgs e)
+        {
+            TambahUser Add = new TambahUser();
+            Add.ShowDialog();
+            this.Activate();
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            EditUser Edit = new EditUser();
+            Edit.ShowDialog();
+            this.Activate();
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Pengguna back = new Pengguna();
+            back.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -54,6 +54,7 @@
             this.BtnTambah.TabIndex = 1;
             this.BtnTambah.Text = "Tambah Data";
             this.BtnTambah.UseVisualStyleBackColor = true;
+            this.BtnTambah.Click += new System.EventHandler(this.BtnTambah_Click);
             // 
             // BtnEdit
             // 
@@ -64,6 +65,7 @@
             this.BtnEdit.TabIndex = 2;
             this.BtnEdit.Text = "Edit Data";
             this.BtnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // BtnHapus
             // 
@@ -95,6 +97,7 @@
             this.BtnBack.TabIndex = 12;
             this.BtnBack.Text = "Kembali";
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // DataAdmin
             // 
