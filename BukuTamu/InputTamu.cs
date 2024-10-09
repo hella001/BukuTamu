@@ -126,7 +126,7 @@ namespace BukuTamu
                 string.IsNullOrWhiteSpace(IntKeperluan.Text) ||
                 string.IsNullOrWhiteSpace(IntKeterangan.Text))
             {
-                MessageBox.Show(" Harap isi semua data yang wajib!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Harap isi semua data yang wajib!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -146,7 +146,7 @@ namespace BukuTamu
 
             RootObject rootData = LoadDataFromJson();
 
-            // tambahkan data baru ke pengunjung
+            // Tambahkan data baru ke pengunjung
             Pengunjung newPengunjung = new Pengunjung
             {
                 id = rootData.pengunjung.Count > 0 ? rootData.pengunjung.Max(p => p.id) + 1 : 1, // id
@@ -159,26 +159,35 @@ namespace BukuTamu
                 Pekerjaan = IntPekerjaan.Text,
                 Keperluan = Encrypt(IntKeperluan.Text),
                 Keterangan = Encrypt(IntKeterangan.Text),
-                FotoPath = fotoKtpPath 
+                FotoPath = fotoKtpPath
             };
 
-            rootData.pengunjung.Add(newPengunjung);
-
-            SaveDataToJson(rootData);
-
-            // posisi foto
+            // pindahkan foto ke "Picture"
             if (!string.IsNullOrEmpty(fotoKtpPath))
             {
+
                 string targetFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Picture");
+
+                // jika folder "Picture" belum ada
                 if (!Directory.Exists(targetFolderPath))
                 {
                     Directory.CreateDirectory(targetFolderPath);
                 }
 
+                // nama file dan jalur dalam direktori "Picture"
                 string targetFilePath = Path.Combine(targetFolderPath, Path.GetFileName(fotoKtpPath));
-                File.Move(fotoKtpPath, targetFilePath);
-                newPengunjung.FotoPath = targetFilePath; // update path foto
+
+                if (File.Exists(fotoKtpPath))
+                {
+                    File.Move(fotoKtpPath, targetFilePath);
+                }
+
+                newPengunjung.FotoPath = targetFilePath;
             }
+
+            rootData.pengunjung.Add(newPengunjung);
+
+            SaveDataToJson(rootData);
 
             MessageBox.Show("Data berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -217,9 +226,18 @@ namespace BukuTamu
 
         private void BtnLihat_Click(object sender, EventArgs e)
         {
-            Lihat LihatFoto = new Lihat();
-            LihatFoto.ShowDialog();
-            this.Activate();
+            string fotoPath = IntFoto.Text; 
+
+            // cek path valid dan file gambar ada
+            if (!string.IsNullOrEmpty(fotoPath) && File.Exists(fotoPath))
+            {
+                Lihat lihatFoto = new Lihat(fotoPath);
+                lihatFoto.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Foto tidak ditemukan atau path tidak valid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnMasuk_Click(object sender, EventArgs e)
